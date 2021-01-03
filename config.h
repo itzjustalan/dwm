@@ -33,7 +33,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.6; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 
@@ -85,6 +85,26 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+
+        { MODKEY,                   XK_Down,    moveresize,     {.v = (int []){ 0, 25, 0, 0 }}},
+        { MODKEY,                   XK_Up,      moveresize,     {.v = (int []){ 0, -25, 0, 0 }}},
+        { MODKEY,                   XK_Right,   moveresize,     {.v = (int []){ 25, 0, 0, 0 }}},
+        { MODKEY,                   XK_Left,    moveresize,     {.v = (int []){ -25, 0, 0, 0 }}},
+        { MODKEY|ShiftMask,         XK_Down,    moveresize,     {.v = (int []){ 0, 0, 0, 25 }}},
+        { MODKEY|ShiftMask,         XK_Up,      moveresize,     {.v = (int []){ 0, 0, 0, -25 }}},
+        { MODKEY|ShiftMask,         XK_Right,   moveresize,     {.v = (int []){ 0, 0, 25, 0 }}},
+        { MODKEY|ShiftMask,         XK_Left,    moveresize,     {.v = (int []){ 0, 0, -25, 0 }}},
+
+    { MODKEY|ControlMask,           XK_Up,     moveresizeedge, {.v = "t"} },
+    { MODKEY|ControlMask,           XK_Down,   moveresizeedge, {.v = "b"} },
+    { MODKEY|ControlMask,           XK_Left,   moveresizeedge, {.v = "l"} },
+    { MODKEY|ControlMask,           XK_Right,  moveresizeedge, {.v = "r"} },
+    { MODKEY|ControlMask|ShiftMask, XK_Up,     moveresizeedge, {.v = "T"} },
+    { MODKEY|ControlMask|ShiftMask, XK_Down,   moveresizeedge, {.v = "B"} },
+    { MODKEY|ControlMask|ShiftMask, XK_Left,   moveresizeedge, {.v = "L"} },
+    { MODKEY|ControlMask|ShiftMask, XK_Right,  moveresizeedge, {.v = "R"} },
+
+
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
