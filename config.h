@@ -6,10 +6,11 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = {
-        "Fira Mono for Powerline:size=10",
-        "NotoColorEmoji:size=10",
-        "monospace:size=10",
-        "Symbola:size14"
+        //"Inconsolata for Powerline:pixelsize=18:antialias=true:autohint=true",
+        "Fira Mono for Powerline:pixelsize=14:antialias=true:autohint=true",
+        "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true",
+       // "monospace:pixelsize=10:antialias=true:autohint=true",
+        "Symbola:pixelsize=14:antialias=true:autohint=true"
 };
 //static const char dmenufont[]       = "monospace:size=10";
 //static const char dmenufont[]       = "monospace:size=10";
