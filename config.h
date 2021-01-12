@@ -21,7 +21,8 @@ static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan_og[]        = "#005577";
 static const char col_cyan_drac[]        = "#8be9fd";
-static const char col_cyan[]        = "#21222c";
+//static const char col_cyan[]        = "#21222c";
+static const char col_cyan[]        = "#757ab1";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_cyan },
@@ -29,7 +30,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "-", "5", "6", "📻", "🌏", "9" };
+static const char *tags[] = { "1", "2", "3", "-", "5", "6", "🎧", "🌏", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -39,7 +40,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask    isterminal  noswallow  isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,           0,            0,       1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,      0,            -1,      0,           -1 },
-	{ "st",       NULL,       NULL,       1 << 8,      1,            1,       1,           -1 },
+	{ "St",       NULL,       NULL,       0,           1,            0,       0,           -1 },
 	{ "float",    NULL,       "notes",    0,           0,            0,       1,           -1 },
 };
 
