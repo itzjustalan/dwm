@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+#include <X11/XF86keysym.h>
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
@@ -55,6 +56,12 @@ static const Layout layouts[] = {
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 };
+
+/* custom constants  */
+static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
+static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
+static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
+
 
 /* key definitions */
 #define MODKEY Mod1Mask
@@ -116,6 +123,15 @@ static Key keys[] = {
     { MODKEY|ControlMask|ShiftMask, XK_Left,   moveresizeedge, {.v = "L"} },
     { MODKEY|ControlMask|ShiftMask, XK_Right,  moveresizeedge, {.v = "R"} },
 
+/*
+    { 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
+    { 0,                       XF86XK_AudioMute, spawn, {.v = mutevol } },
+    { 0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
+*/
+
+    { MODKEY,                       XK_F11, spawn, {.v = downvol } },
+    { MODKEY,                       XK_F9,  spawn, {.v = mutevol } },
+    { MODKEY,                       XK_F12, spawn, {.v = upvol   } },
 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
