@@ -31,7 +31,8 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "-", "5", "6", "🎧", "🌏", "9" };
+// nerd font icons  ﲎ                      
+static const char *tags[] = { "", "2", "3", "-", "5", "6", "🎧", "🌏", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
