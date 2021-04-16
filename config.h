@@ -31,8 +31,10 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-// nerd font icons  ﲎ                        爵    ﱘ   
-static const char *tags[] = { "", "2", "3", "-", "5", "6", "", "", "" };
+// nerd font icons  ﲎ                        爵    ﱘ    ﭮ ﭮ   力   歷   
+// telegram -        切
+//static const char *tags[] = { " rch", "2", "3", "———|———", "5", "6", "", "8", "力" };
+static const char *tags[] = { " rch", "2", "3", "4,,", "5", "6", "", "8", "力" };
 
 static const Rule rules[] = {
 	/* xprop(1):
