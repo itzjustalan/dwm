@@ -34,7 +34,7 @@ static const char *colors[][3]      = {
 // nerd font icons  ﲎ                        爵    ﱘ    ﭮ ﭮ   力   歷   
 // telegram -        切
 //static const char *tags[] = { " rch", "2", "3", "———|———", "5", "6", "", "8", "力" };
-static const char *tags[] = { " rch", "2", "3", "4,,", "5", "6", "", "8", "力" };
+static const char *tags[] = { " rch", "2", "3", "4,,", "5", "6", "", "8", "力", "aau", "aap", "acp", "asx", "asp", "#" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -150,6 +150,16 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
+
+/* custom work spaces */
+  TAGKEYS(                        XK_F5,                     9)
+  TAGKEYS(                        XK_F6,                     10)
+  TAGKEYS(                        XK_F7,                     11)
+  TAGKEYS(                        XK_F8,                     12)
+  TAGKEYS(                        XK_F9,                     13)
+  TAGKEYS(                        XK_F10,                     14)
+
+
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
