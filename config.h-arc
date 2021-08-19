@@ -2,28 +2,32 @@
 #include <X11/XF86keysym.h>
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = {
-        "Fira Mono for Powerline:pixelsize=17:antialias=true:autohint=true",
+        //"Inconsolata for Powerline:pixelsize=18:antialias=true:autohint=true",
+        "Fira Mono for Powerline:pixelsize=14:antialias=true:autohint=true",
         "NotoColorEmoji:pixelsize=14:antialias=true:autohint=true",
+       // "monospace:pixelsize=10:antialias=true:autohint=true",
         "Symbola:pixelsize=14:antialias=true:autohint=true"
 };
+//static const char dmenufont[]       = "monospace:size=10";
+//static const char dmenufont[]       = "monospace:size=10";
 static const char dmenufont[]       = "Fira Mono:size=16";
-static const char col_gray1[]       = "#0B2942";
+static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#0B2942";
+static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan_og[]        = "#005577";
-static const char col_cyan_drac[]        = "#0B2942";
-static const char col_cyan[]        = "#82AAFF";
-static const char col_border[]        = "#C792EA";
+static const char col_cyan_drac[]        = "#8be9fd";
+//static const char col_cyan[]        = "#21222c";
+static const char col_cyan[]        = "#4B6479";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_cyan_drac },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_border},
+	[SchemeNorm] = { col_gray3, col_gray1, col_cyan },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan_drac},
 };
 
 /** colors **
@@ -171,10 +175,10 @@ static Key keys[] = {
     { MODKEY,                       XK_F9,  spawn, {.v = mutevol } },
     { MODKEY,                       XK_F12, spawn, {.v = upvol   } },
 
-  TAGKEYS(                        XK_1,                     0)
-  TAGKEYS(                        XK_2,                     1)
-	TAGKEYS(                        XK_F1,                      2)
-	TAGKEYS(                        XK_F2,                      3)
+  TAGKEYS(                        XK_F1,                     0)
+  TAGKEYS(                        XK_F2,                     1)
+	TAGKEYS(                        XK_1,                      2)
+	TAGKEYS(                        XK_2,                      3)
 	TAGKEYS(                        XK_3,                      4)
 	TAGKEYS(                        XK_4,                      5)
 	TAGKEYS(                        XK_5,                      6)
