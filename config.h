@@ -19,7 +19,8 @@ static const char col_gray4[]       = "#0B2942";
 static const char col_cyan_og[]        = "#005577";
 static const char col_cyan_drac[]        = "#0B2942";
 static const char col_cyan[]        = "#82AAFF";
-static const char col_border[]        = "#C792EA";
+//static const char col_border[]        = "#C792EA";
+static const char col_border[]        = "#ff6b00";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_cyan_drac },
@@ -64,7 +65,7 @@ static const char *colors[][3]      = {
 // telegram -        切
 // apps -           隷   黎 
 //static const char *tags[] = { " rch", "2", "3", "———|———", "5", "6", "", "8", "力" };
-static const char *tags[] = { " rch", "", "1", "2", "3", "4,,", "5", "6", "", "8", "力", "aau", "aap", "acp", "asx", "asp", "#", "黎", "", "", "ooo" };
+static const char *tags[] = { " rch", "", "1", "2", "3", "4,,", "5", "6", "", "8", "力", "aap", "aau", "acp", "asx", "asp", "#", "黎", "", "", "ooo" };
 
 static const Rule rules[] = {
 	/* xprop(1):
