@@ -4,7 +4,7 @@
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const int showbar            = 1;        /* 0 means no bar */
+static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = {
         "Fira Mono for Powerline:pixelsize=17:antialias=true:autohint=true",
@@ -65,7 +65,7 @@ static const char *colors[][3]      = {
 // telegram -        切
 // apps -           隷   黎 
 //static const char *tags[] = { " rch", "2", "3", "———|———", "5", "6", "", "8", "力" };
-static const char *tags[] = { " rch", "", "1", "2", "3", "4,,", "5", "6", "", "8", "力", "aap", "aau", "acp", "asx", "asp", "#", "黎", "", "", "ooo" };
+static const char *tags[] = { " rch", "", "1", "2", "3", "4,,", "5", "6", "", "8", "力", "aap", "aau", "acp", "axp", "asp", "#", "黎", "", "", "ooo" };
 
 static const Rule rules[] = {
 	/* xprop(1):
